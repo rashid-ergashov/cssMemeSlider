@@ -1,0 +1,24 @@
+body {
+  font-size: 1.6rem;
+
+  color: #ffdf9e;
+  background-color: #b77171;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.contaner {
+  margin: 0 auto 2rem;
+  width: 35vw;
+  padding: 1.1rem;
+  border-radius: 1%;
+  background: #4a4848;
+}
