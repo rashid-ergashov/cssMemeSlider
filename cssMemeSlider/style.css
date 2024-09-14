@@ -7,18 +7,134 @@ body {
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 h1 {
   margin: 0;
   padding: 0;
 }
+.contaner {
+}
 
 .contaner {
   margin: 0 auto 2rem;
   width: 35vw;
-  padding: 1.1rem;
+
+  padding: 1.2rem;
   border-radius: 1%;
   background: #4a4848;
+}
+.title {
+  /* font-size: 45px; */
+  /* font-size: clamp(1.813rem, 0.719rem + 3.5vw, 3.563rem); */
+  font-size: clamp(1.5rem, 0.827rem + 3.37vw, 3.563rem);
+}
+
+input {
+  display: none;
+}
+.radio label {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio label span {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: #9b8282;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  display: block;
+}
+.radio label:hover span {
+  background-color: #ffffff;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.botom {
+  flex: 0 0 70%;
+}
+.radio {
+  flex: 0 0 27%;
+  width: 20%;
+}
+
+.slid_img {
+  flex: 0 0 100%;
+  background-color: #b3b3b3;
+  overflow: hidden;
+  border-radius: 3%;
+}
+.slides {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+.imgs {
+  width: 100%;
+  display: inline-block;
+}
+.header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.botom_wrap {
+  /* width: 100%; */
+  width: 24vw;
+  overflow: hidden;
+}
+.text_wrap {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.text_wrap p {
+  /* font-size: 1.1rem; */
+  font-size: clamp(0.875rem, 0.142rem + 1.36vw, 1.25rem);
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+#slide1:checked ~ .slid_img .slides,
+#slide1:checked ~ .botom .botom_wrap .text_wrap {
+  transform: translateX(0);
+}
+#slide2:checked ~ .slid_img .slides,
+#slide2:checked ~ .botom .botom_wrap .text_wrap {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slid_img .slides,
+#slide3:checked ~ .botom .botom_wrap .text_wrap {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slid_img .slides,
+#slide4:checked ~ .botom .botom_wrap .text_wrap {
+  transform: translateX(-300%);
+}
+
+#slide1:checked ~ .radio #radio-slide1 span,
+#slide2:checked ~ .radio #radio-slide2 span,
+#slide3:checked ~ .radio #radio-slide3 span,
+#slide4:checked ~ .radio #radio-slide4 span {
+  border: 0.1rem solid greenyellow;
+  background-color: #d21212;
+}
+
+@media (max-width: 1024px) {
+  .contaner {
+  }
 }
