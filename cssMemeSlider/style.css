@@ -1,58 +1,65 @@
 body {
-  font-size: 1.6rem;
-
   color: #ffdf9e;
   background-color: #b77171;
 }
 
 html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
 }
 
 h1 {
   margin: 0;
   padding: 0;
 }
-.contaner {
-}
 
 .contaner {
-  margin: 0 auto 2rem;
-  width: 35vw;
-
-  padding: 1.2rem;
+  margin: 2rem auto;
+  width: 65vw;
+  padding: 1.5rem;
   border-radius: 1%;
   background: #4a4848;
 }
 .title {
   /* font-size: 45px; */
   /* font-size: clamp(1.813rem, 0.719rem + 3.5vw, 3.563rem); */
-  font-size: clamp(1.5rem, 0.827rem + 3.37vw, 3.563rem);
+  /* font-size: clamp(1.5rem, 0.827rem + 3.37vw, 3.563rem); */
+  /* font-size: clamp(1.25rem, 0.944rem + 1.53vw, 2.188rem); */
+  font-size: clamp(7rem, 5.412rem + 5.65vw, 10rem);
 }
 
 input {
   display: none;
 }
 .radio label {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.8rem;
 }
 .radio {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .radio label span {
-  width: 0.7rem;
-  height: 0.7rem;
   border-radius: 50%;
   background-color: #9b8282;
+  border: 0.2rem solid rgb(198, 203, 191);
   transition: background-color 0.5s ease;
   cursor: pointer;
   display: block;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 .radio label:hover span {
   background-color: #ffffff;
@@ -61,13 +68,13 @@ input {
 .wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1.6rem;
 }
 .botom {
-  flex: 0 0 70%;
+  flex: 0 0 80%;
 }
 .radio {
-  flex: 0 0 27%;
+  flex: 0 0 17%;
   width: 20%;
 }
 
@@ -76,6 +83,7 @@ input {
   background-color: #b3b3b3;
   overflow: hidden;
   border-radius: 3%;
+  height: 55rem;
 }
 .slides {
   display: flex;
@@ -84,15 +92,18 @@ input {
 .imgs {
   width: 100%;
   display: inline-block;
+
+  height: 55rem;
+  flex-shrink: 0;
+  object-fit: fill;
 }
 .header {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .botom_wrap {
-  /* width: 100%; */
-  width: 24vw;
+  width: 70%;
   overflow: hidden;
 }
 .text_wrap {
@@ -101,10 +112,11 @@ input {
   transition: transform 0.2s ease;
 }
 .text_wrap p {
-  /* font-size: 1.1rem; */
-  font-size: clamp(0.875rem, 0.142rem + 1.36vw, 1.25rem);
+  font-size: 3.8rem;
+  /* font-size: clamp(0.875rem, 0.142rem + 1.36vw, 1.25rem); */
   flex: 0 0 100%;
   margin: 0;
+  padding: 0;
 }
 
 #slide1:checked ~ .slid_img .slides,
@@ -135,6 +147,23 @@ input {
 }
 
 @media (max-width: 1024px) {
+}
+@media (max-width: 767px) {
+  html {
+    font-size: calc(100vw / 500 * 5);
+  }
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botom {
+    order: 3;
+  }
+  .radio {
+    order: 2;
+  }
   .contaner {
+    width: 92vw;
   }
 }
