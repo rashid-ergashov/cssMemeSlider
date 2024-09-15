@@ -41,9 +41,9 @@ input {
   justify-content: center;
   background-color: transparent;
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.9rem;
 }
 .radio {
   display: flex;
@@ -58,8 +58,8 @@ input {
   transition: background-color 0.5s ease;
   cursor: pointer;
   display: block;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 .radio label:hover span {
   background-color: #ffffff;
